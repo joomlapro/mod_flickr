@@ -20,6 +20,12 @@
 		<language tag="pt-BR">pt-BR/pt-BR.mod_flickr.ini</language>
 		<language tag="pt-BR">pt-BR/pt-BR.mod_flickr.sys.ini</language>
 	</languages>
+	<media destination="mod_flickr" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
