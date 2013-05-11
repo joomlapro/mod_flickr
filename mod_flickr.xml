@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_flickr</name>
+	<author>Bruno Batista</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 AtomTech, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bruno@atomtech.com.br</authorEmail>
+	<authorUrl>http://www.atomtech.com.br</authorUrl>
+	<version>1.0</version>
+	<description>MOD_FLICKR_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_flickr">mod_flickr.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_flickr.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.mod_flickr.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_flickr.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="user" type="text" size="40" class="inputbox" label="MOD_FLICKR_FIELD_USER_LABEL" description="MOD_FLICKR_FIELD_USER_DESC" />
+				<field name="count" type="list" default="8" label="MOD_FLICKR_FIELD_COUNT_LABEL" description="MOD_FLICKR_FIELD_COUNT_DESC" class="inputbox" size="1">
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field name="display" type="list" default="latest" label="MOD_FLICKR_FIELD_DISPLAY_LABEL" description="MOD_FLICKR_FIELD_DISPLAY_DESC" class="inputbox" size="1">
+					<option value="latest">MOD_FLICKR_OPTION_LATEST</option>
+					<option value="random">MOD_FLICKR_OPTION_RANDOM</option>
+				</field>
+				<field name="layout_style" type="list" default="x" label="MOD_FLICKR_FIELD_LAYOUT_LABEL" description="MOD_FLICKR_FIELD_LAYOUT_DESC" class="inputbox" size="1">
+					<option value="h">MOD_FLICKR_OPTION_HORIZONTALLY</option>
+					<option value="v">MOD_FLICKR_OPTION_VERTICALLY</option>
+					<option value="x">MOD_FLICKR_OPTION_NOT_STYLED</option>
+				</field>
+				<field name="source" type="list" default="user" label="MOD_FLICKR_FIELD_SOURCE_LABEL" description="MOD_FLICKR_FIELD_SOURCE_DESC" class="inputbox" size="1">
+					<option value="user">MOD_FLICKR_OPTION_USER</option>
+					<option value="user_tag">MOD_FLICKR_OPTION_USER_TAG</option>
+					<option value="user_set">MOD_FLICKR_OPTION_USER_SET</option>
+					<option value="group">MOD_FLICKR_OPTION_GROUP</option>
+					<option value="group_tag">MOD_FLICKR_OPTION_GROUP_TAG</option>
+					<option value="all">MOD_FLICKR_OPTION_ALL</option>
+					<option value="all_tag">MOD_FLICKR_OPTION_ALL_TAG</option>
+				</field>
+				<field name="size" type="list" default="s" label="MOD_FLICKR_FIELD_SIZE_LABEL" description="MOD_FLICKR_FIELD_SIZE_DESC" class="inputbox" size="1">
+					<option value="s">MOD_FLICKR_OPTION_SQUARE</option>
+					<option value="t">MOD_FLICKR_OPTION_THUMBNAIL</option>
+					<option value="m">MOD_FLICKR_OPTION_MEDIUM</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid" />
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
